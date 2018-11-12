@@ -1,0 +1,41 @@
+.editable {
+  &__input {
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 20px;
+    max-width: 100%;
+    resize: none;
+    padding: 2px 5px;
+
+    &:focus {
+      outline: 0;
+      border-bottom: 1px solid #000;
+    }
+
+    &:empty:before {
+      content:attr(placeholder);
+      color: #aaa;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: 5px;
+  }
+
+  &__counter {
+    font-size: 12px;
+    text-align: right;
+  }
+}
+
+.error {
+  color: red;
+
+  .editable {
+    &__input {
+      border-color: red;
+    }
+  }
+}
+
+

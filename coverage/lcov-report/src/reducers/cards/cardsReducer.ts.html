@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/reducers/cards/cardsReducer.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/reducers/cards</a> cardsReducer.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { LaneActionTypes } from "../../actions/laneActions";</span>
+<span class="cstat-no" title="statement not covered" >import { CardActionTypes } from "../../actions/cardActions";</span>
+import { RootAction } from "../";
+import CardModel from "../../models/cardModel";
+&nbsp;
+export interface CardsState {
+  byId: {
+    [cardId: string]: CardModel;
+  };
+  allIds: string[];
+}
+&nbsp;
+const initialState = <span class="cstat-no" title="statement not covered" >{</span>
+  byId: {},
+  allIds: [],
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >export default <span class="fstat-no" title="function not covered" >(<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span>state: CardsState = initialState,</span> action: RootAction) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >  switch (action.type) {</span>
+    case CardActionTypes.CARD_CREATE:
+<span class="cstat-no" title="statement not covered" >      return createCard(state, action.payload.card);</span>
+&nbsp;
+    case CardActionTypes.CARD_DELETE:
+<span class="cstat-no" title="statement not covered" >      return deleteCard(state, action.payload.cardId);</span>
+&nbsp;
+    case CardActionTypes.CARD_UPDATE: {
+      const <span class="cstat-no" title="statement not covered" >{ <span class="cstat-no" title="statement not covered" >cardId, <span class="cstat-no" title="statement not covered" >changes } = action.payload;</span></span></span>
+<span class="cstat-no" title="statement not covered" >      return updateCard(state, cardId, changes);</span>
+    }
+&nbsp;
+    case LaneActionTypes.LANE_DELETE:
+<span class="cstat-no" title="statement not covered" >      return deleteLane(state, action.payload.laneId);</span>
+&nbsp;
+    default: <span class="cstat-no" title="statement not covered" >return state;</span>
+  }
+};
+&nbsp;
+function <span class="fstat-no" title="function not covered" >createCard(state: CardsState, card: CardModel): CardsState {</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    byId: {
+      ...state.byId,
+      [card.id]: card,
+    },
+    allIds: [...state.allIds, card.id],
+  };
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >deleteCard(state: CardsState, cardId: string): CardsState {</span>
+  const <span class="cstat-no" title="statement not covered" >{<span class="cstat-no" title="statement not covered" >[cardId]: deletedCard, <span class="cstat-no" title="statement not covered" >...otherCards} = state.byId;</span></span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    byId: otherCards,
+    allIds: state.allIds.filter(<span class="fstat-no" title="function not covered" >(</span>id: string): boolean =&gt; <span class="cstat-no" title="statement not covered" >id !== cardId),</span>
+  };
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >updateCard(state: CardsState, cardId: string, changes: Partial&lt;CardModel&gt;): CardsState {</span>
+  const card = <span class="cstat-no" title="statement not covered" >state.byId[cardId];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    allIds: state.allIds,
+    byId: {
+      ...state.byId,
+      [cardId]: {
+        ...card,
+        ...changes,
+      },
+    },
+  };
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >deleteLane(state: CardsState, laneId: string): CardsState {</span>
+  const cards = <span class="cstat-no" title="statement not covered" >Object.values(state.byId).filter(<span class="fstat-no" title="function not covered" >(</span>card: CardModel) =&gt; <span class="cstat-no" title="statement not covered" >card.laneId !== laneId);</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    byId: cards.reduce(<span class="fstat-no" title="function not covered" >(</span>byId: { [cardId: string]: CardModel }, card: CardModel) =&gt; {
+<span class="cstat-no" title="statement not covered" >      byId[card.id] = card;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return byId;</span>
+    }, {}),
+    allIds: cards.map(<span class="fstat-no" title="function not covered" >(</span>card: CardModel) =&gt; <span class="cstat-no" title="statement not covered" >card.id),</span>
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 12 2018 20:22:00 GMT+0100 (Central European Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
