@@ -2,7 +2,7 @@
 
 Simple kanban app for managing boards and cards
 
-[Demo](https://kanban-app.herokuapp.com)
+[Demo](https://kanban-react-typescript.herokuapp.com)
 
 ## Installation
 
